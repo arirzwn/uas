@@ -5,22 +5,33 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const userDb = { username: "admin", password: "admin", isLogin: false };
-
-  function handleLogin(e) {
-    e.preventDefault();
-    if (userDb.username === "admin" && userDb.password === "admin") {
-      alert("Login berhasil");
-    } else {
-      alert("Username dan password salah");
-    }
-  }
 
   const navigate = useNavigate();
 
+  const userDb = { username: "admin", password: "12345", isLogin: false };
+  localStorage.setItem("userdata", JSON.stringify(userDb));
+  const getUserData = JSON.parse(localStorage.getItem("userdata") || '""');
+
+  console.log(`Apakah ngabs ini sudah login? ${getUserData.isLogin}`);
+
+  function handleLogin(e) {
+    e.preventDefault();
+    if (
+      username === getUserData.username &&
+      password === getUserData.password
+    ) {
+      alert("success");
+      // kita update data dari user nya, jadi isLogin nya true
+      const updatedUserData = { ...getUserData, isLogin: true };
+      // simpan data baru ini ke localstorage
+      localStorage.setItem("userdata", JSON.stringify(updatedUserData));
+      navigate("/Home");
+    }
+  }
+
   useEffect(() => {
-    !userDb.isLogin && navigate("/Home");
-  }, []);
+    console.log("re render ok");
+  }, [location.pathname]);
 
   return (
     <>

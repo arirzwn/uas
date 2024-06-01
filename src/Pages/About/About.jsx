@@ -1,5 +1,4 @@
 import Button from "../../components/Button.jsx";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const mataKuliah = [
@@ -53,7 +52,7 @@ export default function About() {
             <div className="collapse-content">
               {" "}
               <Button className="bg-green-300 text-sm font-normal px-2 py-1 rounded-sm">
-                <Link to="/Absen">Absen</Link>
+                <Link to="/Absen">Lihat</Link>
               </Button>
             </div>
           </div>
