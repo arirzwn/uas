@@ -14,6 +14,21 @@ export default function Login() {
 
   console.log(`Apakah ngabs ini sudah login? ${getUserData.isLogin}`);
 
+  // function handleLogin(e) {
+  //   e.preventDefault();
+  //   if (
+  //     username === getUserData.username &&
+  //     password === getUserData.password
+  //   ) {
+  //     alert("success");
+  //     // kita update data dari user nya, jadi isLogin nya true
+  //     const updatedUserData = { ...getUserData, isLogin: true };
+  //     // simpan data baru ini ke localstorage
+  //     localStorage.setItem("userdata", JSON.stringify(updatedUserData));
+  //     navigate("/Home");
+  //   }
+  // }
+
   function handleLogin(e) {
     e.preventDefault();
     if (

@@ -3,9 +3,15 @@ import Navbar from "./components/Navbar.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import About from "./Pages/About/About.jsx";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Login from "./Pages/Login/Login.jsx";
 import Absen from "./Pages/Absen/Absen.jsx";
+import { SelectedDosenContext } from "./components/SelectedDosenContext.js";
 
 // const Matkul = [
 //   {
@@ -88,26 +94,53 @@ import Absen from "./Pages/Absen/Absen.jsx";
 // ReactDOM.createRoot(document.getElementById("root")).render(<Root />);
 
 // Code 2 bisa digunakan
+// export default function App() {
+//   return (
+//     <Router>
+//       <div className="flex flex-col min-h-screen">
+//         {location.pathname !== "/" && <Navbar />}
+//         {/*<Navbar />*/}
+//         <Routes>
+//           <Route index element={<Login />} />
+//           <Route path="/Home" element={<Home />} />
+//           <Route path="/About" element={<About />} />
+//           <Route path="/Absen" element={<Absen />} />
+//         </Routes>
+//         {/*<Footer />*/}
+//         {location.pathname !== "/" && <Footer />}
+//       </div>
+//     </Router>
+//   );
+// }
+
+//experiment
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        {location.pathname !== "/" && <Navbar />}
-        {/*<Navbar />*/}
-        <Routes>
-          <Route index element={<Login />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Absen" element={<Absen />} />
-        </Routes>
-        {/*<Footer />*/}
-        {location.pathname !== "/" && <Footer />}
-      </div>
+      <SelectedDosenContext.Provider>
+        <AppContent />
+      </SelectedDosenContext.Provider>
     </Router>
   );
 }
 
-//experiment
-// export default function App() {
-//   return <Home />;
-// }
+function AppContent() {
+  const location = useLocation();
+
+  return (
+    <div className="flex flex-col h-screen overflow-y-auto">
+      {location.pathname !== "/" && location.pathname !== "/Login" && (
+        <Navbar />
+      )}
+      <Routes>
+        <Route index element={<Login />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Absen" element={<Absen />} />
+      </Routes>
+      {location.pathname !== "/" && location.pathname !== "/Login" && (
+        <Footer />
+      )}
+    </div>
+  );
+}

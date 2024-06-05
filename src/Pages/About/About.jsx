@@ -1,6 +1,5 @@
 import Button from "../../components/Button.jsx";
 import { Link } from "react-router-dom";
-import { React } from "react";
 
 const Matkul = [
   {
@@ -52,7 +51,7 @@ const Matkul = [
 export default function About() {
   return (
     <>
-      <div className="w-[85%]  bg-[#3C6CA8] mx-auto p-4 rounded-md ">
+      <div className="w-[85%]  bg-[#3C6CA8] mx-auto p-4 rounded-md mt-4">
         {Matkul.map((objMatkul) => (
           <div
             className="collapse collapse-arrow bg-white mb-2 "
