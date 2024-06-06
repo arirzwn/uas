@@ -11,7 +11,8 @@ import {
 } from "react-router-dom";
 import Login from "./Pages/Login/Login.jsx";
 import Absen from "./Pages/Absen/Absen.jsx";
-import { SelectedDosenContext } from "./components/SelectedDosenContext.js";
+import { SelectedMatkulContext } from "./components/SelectedDosenContext.js";
+import { useState } from "react";
 
 // const Matkul = [
 //   {
@@ -115,11 +116,15 @@ import { SelectedDosenContext } from "./components/SelectedDosenContext.js";
 
 //experiment
 export default function App() {
+  const [selectedMatkul, setSelectedMatkul] = useState();
+
   return (
     <Router>
-      <SelectedDosenContext.Provider>
+      <SelectedMatkulContext.Provider
+        value={{ selectedMatkul, setSelectedMatkul }}
+      >
         <AppContent />
-      </SelectedDosenContext.Provider>
+      </SelectedMatkulContext.Provider>
     </Router>
   );
 }
