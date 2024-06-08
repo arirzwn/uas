@@ -17,7 +17,7 @@ export default function Home() {
             <Button className="bg-white text-[#3C6CA8] w-28 h-10 ">
               Previous
             </Button>{" "}
-            <Link to="/About">
+            <Link to="/Kelas">
               {" "}
               <Button className="border-[#3C6CA8] border-2 w-28 h-10 ">
                 Next

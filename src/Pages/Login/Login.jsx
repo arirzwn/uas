@@ -8,7 +8,18 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  const userDb = { username: "admin", password: "12345", isLogin: false };
+  const userDb = [
+    {
+      username: "admin",
+      password: "12345",
+      isLogin: false,
+    },
+    {
+      username: "mahasiswa1",
+      password: "mahasiswa1",
+      isLogin: false,
+    },
+  ];
   localStorage.setItem("userdata", JSON.stringify(userDb));
   const getUserData = JSON.parse(localStorage.getItem("userdata") || '""');
 
@@ -31,19 +42,24 @@ export default function Login() {
 
   function handleLogin(e) {
     e.preventDefault();
-    if (
-      username === getUserData.username &&
-      password === getUserData.password
-    ) {
+    const user = userDb.find(
+      (user) => user.username === username && user.password === password,
+    );
+    if (user) {
       alert("success");
       // kita update data dari user nya, jadi isLogin nya true
-      const updatedUserData = { ...getUserData, isLogin: true };
+      const updatedUserData = userDb.map((userItem) =>
+        userItem.username === user.username
+          ? { ...userItem, isLogin: true }
+          : userItem,
+      );
       // simpan data baru ini ke localstorage
       localStorage.setItem("userdata", JSON.stringify(updatedUserData));
       navigate("/Home");
+    } else {
+      alert("Kata sandi salah!");
     }
   }
-
   useEffect(() => {
     console.log("re render ok");
   }, [location.pathname]);

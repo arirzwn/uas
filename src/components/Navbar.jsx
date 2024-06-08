@@ -16,21 +16,24 @@ export default function Navbar() {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 items-center">
             <li>
-              <Link to="/">
+              <Link to="/Home">
                 <a>Home</a>
               </Link>
             </li>
             <li>
-              <Link to="/About">
+              <Link to="/Kelas">
                 {" "}
-                <a>About Us</a>
+                <a>Kelas</a>
               </Link>
             </li>
             <li>
               <a>Service</a>
             </li>
             <li>
-              <a>Contact</a>
+              <Link to="/About">
+                {" "}
+                <a>About</a>
+              </Link>
             </li>
           </ul>
         </div>

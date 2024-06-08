@@ -1,83 +1,93 @@
-import Button from "../../components/Button.jsx";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { SelectedMatkulContext } from "../../components/SelectedDosenContext.js";
+import { FaInstagram } from "react-icons/fa";
 
-const Matkul = [
+const team = [
   {
-    matkul: "Psikologi Kependidikan ",
-    dosen: "Dr. Ajat Rukajat, M.M.Pd",
-    qr: "./src/assets/qr/qr Psikologi Kependidikan.png",
+    nama: "Anita Zahra",
+    sosmed: "https://www.instagram.com/zraanita/",
+    img: "./src/assets/team/ANITA ZAHRA .jpeg",
   },
   {
-    matkul: "Perencanaan Pendidikan Islam ",
-    dosen: "Dr. Hj. Mimin Maryati, M.Pd",
-    qr: "./src/assets/qr/qr Perencanaan Pendidikan.png",
+    nama: "Aulia Helen Safitri Nasution",
+    sosmed: "https://www.instagram.com/helensftrii/",
+    img: "./src/assets/team/AULIA HELEN SAFITRI NASUTION.jpeg",
   },
   {
-    matkul: "Manajemen Strategik Pendidikan ",
-    dosen: "Dr. H. Ilham Fahmi, S.Pd., M.Pd",
-    qr: "./src/assets/qr/qr Manajemen Strategi.png",
+    nama: "Syifa'ul Hidayah",
+    sosmed: "https://www.instagram.com/syifahdyh/",
+    img: "./src/assets/team/SYIFA'UL HIDAYAH.jpeg",
   },
   {
-    matkul: "Etika Profesi Kependidikan",
-    dosen: "Dr. Abu Bakar, M.Pd",
-    qr: "./src/assets/qr/qr Etika Profesi.png",
+    nama: "Yuni Luthfiah",
+    sosmed: "https://www.instagram.com/yuniluthfi04/",
+    img: "./src/assets/team/YUNI LUTHFIAH.png",
   },
   {
-    matkul: "Final Proyek Literasi Digital",
-    dosen: "Nanang Burhan, BSc., M.T",
-    qr: "./src/assets/qr/qr Final Proyek.png",
-  },
-  {
-    matkul: "Manajemen Perubahan Pendidikan",
-    dosen: "H. Abdul Kosim, Lc., M.M.Pd",
-    qr: "./src/assets/qr/qr Manajemen Perubahan Islam.png",
-  },
-  {
-    matkul: "Manajemen SDM",
-    dosen: "N. Fathurrohman, S.Ag., M.Pd.I",
-    qr: "./src/assets/qr/qr Manaj SDM.png",
-  },
-  {
-    matkul: "Manajemen Kelas ",
-    dosen: "Hinggil Permana, S.Pd.I., M.Pd",
-    qr: "./src/assets/qr/qr Manaj Kelas.png",
-  },
-  {
-    matkul: "Supervisi Pendidikan",
-    dosen: "Dr. H. Acep Nurlaeli, M.Ag",
-    qr: "./src/assets/qr/qr Supervisi Pend.png",
+    nama: "Zalfa Syahirah",
+    sosmed: "https://www.instagram.com/zalfasyhrh_/",
+    img: "./src/assets/team/ZALFA SYAHIRAH.jpeg",
   },
 ];
 
-export default function About() {
-  const { setSelectedMatkul } = useContext(SelectedMatkulContext);
+// export default function About() {
+//   return (
+//     <>
+//       <h1 className="text-2xl text-center">Our Awesome Team</h1>
+//       <div className="w-[70%] bg-white h-screen mx-auto flex gap-4  justify-center mt-10 rounded-md">
+//         {team.map((objTeam) => (
+//           <div
+//             className="w-40 h-48 bg-pink-200 gap-4 flex flex-col items-center text-center my-auto p-4 rounded-md justify-evenly"
+//             key={objTeam.nama}
+//           >
+//             <figure className="w-20 h-20    ">
+//               <img
+//                 src={objTeam.img}
+//                 alt={objTeam.nama}
+//                 className="rounded-full overflow-hidden"
+//               />
+//             </figure>
+//             <div className="flex flex-col items-center">
+//               <h1 className="text-">{objTeam.nama}</h1>
+//               <a href={objTeam.sosmed} className=" items-endem">
+//                 <FaInstagram className="w-6 h-6" />
+//               </a>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </>
+//   );
+// }
 
+export default function About() {
   return (
     <>
-      <div className="w-[85%]  bg-[#3C6CA8] mx-auto p-4 rounded-md mt-4">
-        {Matkul.map((objMatkul) => (
-          <div
-            className="collapse collapse-arrow bg-white mb-2 "
-            key={objMatkul.dosen}
-          >
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title text-sm">
-              <strong> {objMatkul.matkul}</strong>
-              <p> {objMatkul.dosen} </p>
+      <div className="w-[70%]  bg-white h-screen mx-auto mt-10 rounded-md">
+        <h1 className="text-2xl text-center my-10">Our Awesome Team</h1>
+        <div className=" flex gap-4 justify-center  rounded-md">
+          {team.map((objTeam) => (
+            <div
+              className="w-40 h-60 bg-pink-200 flex flex-col items-center text-center my-auto p-4 rounded-md"
+              key={objTeam.nama}
+            >
+              <figure className="w-20 h-20 mb-4">
+                <img
+                  src={objTeam.img}
+                  alt={objTeam.nama}
+                  className="rounded-full object-cover w-full h-full"
+                />
+              </figure>
+              <div className="flex flex-col items-center flex-grow">
+                <h1 className="text-md mb-2 font-normal">{objTeam.nama}</h1>
+                <a
+                  href={objTeam.sosmed}
+                  className="mt-auto bg-white p-2 rounded-full hover:bg-pink-200 hover:border-2 hover:border-red-400 "
+                >
+                  <FaInstagram className="w-6 h-6" />
+                </a>
+              </div>
             </div>
-
-            <div className="collapse-content">
-              {" "}
-              <Button className="bg-green-300 text-sm font-normal px-2 py-1 rounded-sm">
-                <Link to="/Absen" onClick={() => setSelectedMatkul(objMatkul)}>
-                  Lihat
-                </Link>
-              </Button>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );

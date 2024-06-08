@@ -1,7 +1,7 @@
 import Footer from "./layout/Footer/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./Pages/Home/Home.jsx";
-import About from "./Pages/About/About.jsx";
+import Kelas from "./Pages/Kelas/Kelas.jsx";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -13,6 +13,7 @@ import Login from "./Pages/Login/Login.jsx";
 import Absen from "./Pages/Absen/Absen.jsx";
 import { SelectedMatkulContext } from "./components/SelectedDosenContext.js";
 import { useState } from "react";
+import About from "./Pages/About/About.jsx";
 
 // const Matkul = [
 //   {
@@ -77,7 +78,7 @@ import { useState } from "react";
 //       <Routes>
 //         <Route path="/" element={<Login />} />
 //         <Route path="/home" element={<Home />} />
-//         <Route path="/about" element={<About />} />
+//         <Route path="/about" element={<Kelas />} />
 //         <Route path="/absen" element={<Absen />} />
 //       </Routes>
 //     </div>
@@ -104,7 +105,7 @@ import { useState } from "react";
 //         <Routes>
 //           <Route index element={<Login />} />
 //           <Route path="/Home" element={<Home />} />
-//           <Route path="/About" element={<About />} />
+//           <Route path="/Kelas" element={<Kelas />} />
 //           <Route path="/Absen" element={<Absen />} />
 //         </Routes>
 //         {/*<Footer />*/}
@@ -140,8 +141,9 @@ function AppContent() {
       <Routes>
         <Route index element={<Login />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/Kelas" element={<Kelas />} />
         <Route path="/Absen" element={<Absen />} />
+        <Route path="/About" element={<About />} />
       </Routes>
       {location.pathname !== "/" && location.pathname !== "/Login" && (
         <Footer />
