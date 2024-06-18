@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="navbar bg-base-100 flex items-center bg-transparent text-white ">
         <div className="flex-1 gap-4">
           <figure className="w-24 ">
-            <img src="../../public/assets/icon/icon.png" alt="Icon" />{" "}
+            <img src="public/assets/icon/icon.png" alt="Icon" />{" "}
           </figure>
           <a className="text-sm">
             Manajemen Pendidikan Islam, <br /> Universitas Singaperbangsa
