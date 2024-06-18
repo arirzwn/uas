@@ -51,6 +51,7 @@ export default function About() {
                 <a
                   href={objTeam.sosmed}
                   className="mt-auto bg-white p-2 rounded-full hover:bg-pink-200 hover:border-2 hover:border-red-400 "
+                  target="_blank"
                 >
                   <FaInstagram className="w-6 h-6" />
                 </a>

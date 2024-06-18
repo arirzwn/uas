@@ -55,7 +55,7 @@ export default function Login() {
         <form onSubmit={handleLogin}>
           <div className="bg-white p-4  flex flex-col gap-4 items-center rounded-md  max-[400px]:mx-20">
             <figure className="w-20">
-              <img src="/src/assets/icon.png" alt="Logo" />
+              <img src="/assets/icon/icon.png" alt="Logo" />
             </figure>
 
             <h1 className="text-center text-sm text-slate-400">
