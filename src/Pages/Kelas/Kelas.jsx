@@ -7,47 +7,47 @@ const Matkul = [
   {
     matkul: "Psikologi Kependidikan ",
     dosen: "Dr. Ajat Rukajat, M.M.Pd",
-    qr: "./src/assets/qr/qr Psikologi Kependidikan.png",
+    qr: "public/assets/qr/qr Psikologi Kependidikan.png",
   },
   {
     matkul: "Perencanaan Pendidikan Islam ",
     dosen: "Dr. Hj. Mimin Maryati, M.Pd",
-    qr: "./src/assets/qr/qr Perencanaan Pendidikan.png",
+    qr: "public/assets/qr/qr Perencanaan Pendidikan.png",
   },
   {
     matkul: "Manajemen Strategik Pendidikan ",
     dosen: "Dr. H. Ilham Fahmi, S.Pd., M.Pd",
-    qr: "./src/assets/qr/qr Manajemen Strategi.png",
+    qr: "public/assets/qr/qr Manajemen Strategi.png",
   },
   {
     matkul: "Etika Profesi Kependidikan",
     dosen: "Dr. Abu Bakar, M.Pd",
-    qr: "./src/assets/qr/qr Etika Profesi.png",
+    qr: "public/assets/qr/qr Etika Profesi.png",
   },
   {
     matkul: "Final Proyek Literasi Digital",
     dosen: "Nanang Burhan, BSc., M.T",
-    qr: "./src/assets/qr/qr Final Proyek.png",
+    qr: "public/assets/qr/qr Final Proyek.png",
   },
   {
     matkul: "Manajemen Perubahan Pendidikan",
     dosen: "H. Abdul Kosim, Lc., M.M.Pd",
-    qr: "./src/assets/qr/qr Manajemen Perubahan Islam.png",
+    qr: "public/assets/qr/qr Manajemen Perubahan Islam.png",
   },
   {
     matkul: "Manajemen SDM",
     dosen: "N. Fathurrohman, S.Ag., M.Pd.I",
-    qr: "./src/assets/qr/qr Manaj SDM.png",
+    qr: "public/assets/qr/qr Manaj SDM.png",
   },
   {
     matkul: "Manajemen Kelas ",
     dosen: "Hinggil Permana, S.Pd.I., M.Pd",
-    qr: "./src/assets/qr/qr Manaj Kelas.png",
+    qr: "public/assets/qr/qr Manaj Kelas.png",
   },
   {
     matkul: "Supervisi Pendidikan",
     dosen: "Dr. H. Acep Nurlaeli, M.Ag",
-    qr: "./src/assets/qr/qr Supervisi Pend.png",
+    qr: "public/assets/qr/qr Supervisi Pend.png",
   },
 ];
 

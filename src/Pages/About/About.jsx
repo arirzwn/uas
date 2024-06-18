@@ -4,27 +4,27 @@ const team = [
   {
     nama: "Anita Zahra",
     sosmed: "https://www.instagram.com/zraanita/",
-    img: "src/assets/team/ANITA.jpeg",
+    img: "public/assets/team/ANITA.jpeg",
   },
   {
     nama: "Aulia Helen Safitri Nasution",
     sosmed: "https://www.instagram.com/helensftrii/",
-    img: "src/assets/team/AULIA.jpeg",
+    img: "public/assets/team/AULIA.jpeg",
   },
   {
     nama: "Syifa'ul Hidayah",
     sosmed: "https://www.instagram.com/syifahdyh/",
-    img: "src/assets/team/SYIFA.jpeg",
+    img: "public/assets/team/SYIFA.jpeg",
   },
   {
     nama: "Yuni Luthfiah",
     sosmed: "https://www.instagram.com/yuniluthfi04/",
-    img: "src/assets/team/YUNI.png",
+    img: "public/assets/team/YUNI.png",
   },
   {
     nama: "Zalfa Syahirah",
     sosmed: "https://www.instagram.com/zalfasyhrh_/",
-    img: "src/assets/team/ZALFA.jpeg",
+    img: "public/assets/team/ZALFA.jpeg",
   },
 ];
 
