@@ -4,59 +4,29 @@ const team = [
   {
     nama: "Anita Zahra",
     sosmed: "https://www.instagram.com/zraanita/",
-    img: "./src/assets/team/ANITA ZAHRA .jpeg",
+    img: "src/assets/team/ANITA ZAHRA .jpeg",
   },
   {
     nama: "Aulia Helen Safitri Nasution",
     sosmed: "https://www.instagram.com/helensftrii/",
-    img: "./src/assets/team/AULIA HELEN SAFITRI NASUTION.jpeg",
+    img: "src/assets/team/AULIA HELEN SAFITRI NASUTION.jpeg",
   },
   {
     nama: "Syifa'ul Hidayah",
     sosmed: "https://www.instagram.com/syifahdyh/",
-    img: "./src/assets/team/SYIFA'UL HIDAYAH.jpeg",
+    img: "src/assets/team/SYIFA'UL HIDAYAH.jpeg",
   },
   {
     nama: "Yuni Luthfiah",
     sosmed: "https://www.instagram.com/yuniluthfi04/",
-    img: "./src/assets/team/YUNI LUTHFIAH.png",
+    img: "src/assets/team/YUNI LUTHFIAH.png",
   },
   {
     nama: "Zalfa Syahirah",
     sosmed: "https://www.instagram.com/zalfasyhrh_/",
-    img: "./src/assets/team/ZALFA SYAHIRAH.jpeg",
+    img: "src/assets/team/ZALFA SYAHIRAH.jpeg",
   },
 ];
-
-// export default function About() {
-//   return (
-//     <>
-//       <h1 className="text-2xl text-center">Our Awesome Team</h1>
-//       <div className="w-[70%] bg-white h-screen mx-auto flex gap-4  justify-center mt-10 rounded-md">
-//         {team.map((objTeam) => (
-//           <div
-//             className="w-40 h-48 bg-pink-200 gap-4 flex flex-col items-center text-center my-auto p-4 rounded-md justify-evenly"
-//             key={objTeam.nama}
-//           >
-//             <figure className="w-20 h-20    ">
-//               <img
-//                 src={objTeam.img}
-//                 alt={objTeam.nama}
-//                 className="rounded-full overflow-hidden"
-//               />
-//             </figure>
-//             <div className="flex flex-col items-center">
-//               <h1 className="text-">{objTeam.nama}</h1>
-//               <a href={objTeam.sosmed} className=" items-endem">
-//                 <FaInstagram className="w-6 h-6" />
-//               </a>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </>
-//   );
-// }
 
 export default function About() {
   return (

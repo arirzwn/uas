@@ -10,7 +10,7 @@ export default function Home() {
             ABSENSI <br /> MAHASISWA MPI UNSIKA
           </h1>
           <h6 className="text-[#F5EA28] font-semibold drop-shadow-2xl ">
-            Universitas Singaperbangsa Karawang, Fakultas Agama Islam, <br />{" "}
+            Universitas Singaperbangsa Karawang, Fakultas Agama Islam, <br />
             Prodi Manajemen Pendidikan Islam.{" "}
           </h6>
           <div className="mt-48  flex  gap-5">
@@ -26,7 +26,7 @@ export default function Home() {
           </div>
         </div>{" "}
         <div className="flex-1">
-          <h1 className="  text-[#1B548D] ">
+          <h1 className=" text-[#1B548D] ">
             Absensi Kehadiran Setiap Mata Kuliah Mahasiswa Manajemen Pendidikan
             Islam, Fakultas Agama Islam, Universitas Singaperbangsa Karawang.
           </h1>

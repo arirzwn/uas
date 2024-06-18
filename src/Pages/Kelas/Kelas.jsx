@@ -56,10 +56,10 @@ export default function Kelas() {
 
   return (
     <>
-      <div className="w-[85%]  bg-[#3C6CA8] mx-auto p-4 rounded-md mt-4">
+      <div className=" w-[85%] bg-[#3C6CA8]  mx-auto p-4 rounded-md mt-4">
         {Matkul.map((objMatkul) => (
           <div
-            className="collapse collapse-arrow bg-white mb-2 "
+            className="collapse collapse-arrow bg-white  mb-2 "
             key={objMatkul.dosen}
           >
             <input type="radio" name="my-accordion-2" />

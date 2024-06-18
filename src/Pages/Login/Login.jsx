@@ -25,21 +25,6 @@ export default function Login() {
 
   console.log(`Apakah ngabs ini sudah login? ${getUserData.isLogin}`);
 
-  // function handleLogin(e) {
-  //   e.preventDefault();
-  //   if (
-  //     username === getUserData.username &&
-  //     password === getUserData.password
-  //   ) {
-  //     alert("success");
-  //     // kita update data dari user nya, jadi isLogin nya true
-  //     const updatedUserData = { ...getUserData, isLogin: true };
-  //     // simpan data baru ini ke localstorage
-  //     localStorage.setItem("userdata", JSON.stringify(updatedUserData));
-  //     navigate("/Home");
-  //   }
-  // }
-
   function handleLogin(e) {
     e.preventDefault();
     const user = userDb.find(
@@ -66,9 +51,9 @@ export default function Login() {
 
   return (
     <>
-      <div className="flex justify-center  min-h-screen items-center ">
+      <div className="flex justify-center  min-h-screen items-center container ">
         <form onSubmit={handleLogin}>
-          <div className="bg-white p-4  flex flex-col gap-4 items-center rounded-md">
+          <div className="bg-white p-4  flex flex-col gap-4 items-center rounded-md  max-[400px]:mx-20">
             <figure className="w-20">
               <img src="/src/assets/icon.png" alt="Logo" />
             </figure>
